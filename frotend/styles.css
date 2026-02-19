@@ -1,0 +1,212 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2em;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+input {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background: #f5f5f5;
+}
+
+tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+tbody tr:nth-child(even):hover {
+    background: #f0f0f0;
+}
+
+/* Estilos para estados */
+.estado-trabajo {
+    background-color: #92D050 !important;
+    color: #1e4620;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.estado-cumple {
+    background-color: #00B0F0 !important;
+    color: #003d5c;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.estado-incumple {
+    background-color: #FF6B6B !important;
+    color: #5c1e1e;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.estado-monitorear {
+    background-color: #FFD966 !important;
+    color: #5c4a1e;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
+#loader {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background: rgba(102, 126, 234, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* =========================
+   MENSAJES UI
+========================= */
+.mensaje {
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mensaje-error {
+    background-color: #ffebee;
+    color: #b71c1c;
+}
+
+.mensaje-info {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+}
+
+.mensaje-exito {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}

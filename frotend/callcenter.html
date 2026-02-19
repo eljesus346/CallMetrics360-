@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Call Center</title>
+  <link rel="icon" type="image/png" href="favicon-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>📞 Dashboard Call Center - Supervisión</h1>
+
+<div class="filters">
+  <label>Cola:
+    <input type="text" id="queue" placeholder="Ej: 9002">
+  </label>
+
+  <label>Fecha inicio:
+    <input type="date" id="fechaInicio">
+  </label>
+
+  <label>Fecha fin:
+    <input type="date" id="fechaFin">
+  </label>
+
+  <button id="btnBuscar">🔎 Consultar</button>
+  <button onclick="descargarExcel()">⬇️ Descargar Excel</button>
+</div>
+
+<div id="loader" class="hidden">⏳ Cargando...</div>
+<div id="mensaje" class="mensaje hidden"></div>
+
+<!-- Contenedor donde se pondrán una o varias tablas -->
+<div id="contenedorTablas">
+  <table id="tabla" border="1">
+    <thead id="thead"></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

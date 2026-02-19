@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon-icon.png">
+    <title>Reporte Control de Agentes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>📊 Reporte Control de Agentes</h1>
+
+    <div class="filters">
+        <label>
+            Fecha inicio:
+            <input type="date" id="fecha_inicio">
+        </label>
+
+        <label>
+            Fecha fin:
+            <input type="date" id="fecha_fin">
+        </label>
+
+        <button onclick="cargarReporte()">🔎 Filtrar</button>
+        <button onclick="descargarExcel()">⬇️ Descargar Excel</button>
+    </div>
+
+    <div id="loader" class="hidden">⏳ Cargando datos...</div>
+
+    <!-- CONTADOR -->
+    <p id="contador" style="color:white; font-weight:bold;"></p>
+
+    <!-- RESUMEN -->
+    <div id="resumen" style="color:white; margin-bottom:15px;"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Agente</th>
+                <th>Tiempo Logueado</th>
+                <th>Tiempo Activo</th>
+                <th>Tipo Pausa</th>
+                <th>Tiempo Pausa</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabla_agentes">
+            <tr>
+                <td colspan="6" style="text-align:center; padding:30px; color:#999;">
+                    👆 Selecciona un rango de fechas y presiona "Filtrar"
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="agentes.js"></script>
+
+</body>
+</html>
